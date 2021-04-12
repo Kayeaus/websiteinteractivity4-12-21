@@ -187,6 +187,27 @@
 
         console.log("Thanks for the page visit!")
 
+        //
+        // BUTTON
+        //
+
+        var clickMeButton = document.getElementById("click-me")
+        var clickCountSpan = document.getElementById("click-count")
+        var clickCount = 0
+
+        function handleClick() {
+            var AnnotherCount = 0
+            console.log("---------------------")
+            console.log("YOU CLICKED ME!")
+            clickCount = clickCount + 1
+            console.log("CLICK COUNT:", clickCount)
+            clickCountSpan.textContent = clickCount
+        }
+
+        clickMeButton.addEventListener("click", handleClick)
+
+            // the console makes use of global scope of our code
+            //AnnotherCount is not accessable outside the scope of the function
     </script>
   </body>
 </html>
